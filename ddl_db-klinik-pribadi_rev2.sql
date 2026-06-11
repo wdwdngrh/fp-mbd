@@ -42,13 +42,6 @@ CREATE TABLE dokter (
 );
 
 -- =========================================================================
--- RELASI: Tambah kolom id_dokter ke tabel kunjungan
--- =========================================================================
-
-ALTER TABLE kunjungan
-    ADD COLUMN id_dokter INT REFERENCES dokter(id_dokter) ON DELETE RESTRICT;
-
--- =========================================================================
 -- 2. TABEL PELAYANAN & REKAM MEDIS
 -- =========================================================================
 
@@ -60,6 +53,13 @@ CREATE TABLE kunjungan (
     keluhan_utama TEXT NOT NULL,
     status_kunjungan VARCHAR(20) DEFAULT 'Menunggu' -- Menunggu, Diperiksa, Selesai
 );
+
+-- =========================================================================
+-- RELASI: Tambah kolom id_dokter ke tabel kunjungan
+-- =========================================================================
+
+ALTER TABLE kunjungan
+    ADD COLUMN id_dokter INT REFERENCES dokter(id_dokter) ON DELETE RESTRICT;
 
 -- Tabel Pemeriksaan / Rekam Medis
 CREATE TABLE pemeriksaan (
