@@ -1,6 +1,4 @@
-Optimasi Query 1
-
-Mencari kunjungan atas nama tertentu (misal: 'Siti Rahayu')
+Optimasi Query 1: Mencari kunjungan atas nama tertentu (misal: 'Siti Rahayu')
 
 Sebelum Indexing
 ```
