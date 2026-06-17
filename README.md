@@ -4,7 +4,7 @@ Mencari kunjungan atas nama tertentu (misal: 'Siti Rahayu')
 
 Sebelum Indexing
 ```
-EXPLAIN ANALYZE SELECT *
+explain analyze SELECT *
 FROM kunjungan
 WHERE id_pasien = (select id_pasien from pasien where nama_pasien = 'Siti Rahayu');
 ```
@@ -18,7 +18,7 @@ ON kunjungan(id_pasien);
 
 Setelah Indexing
 ```
-EXPLAIN ANALYZE SELECT *
+explain analyze SELECT *
 FROM kunjungan
 WHERE id_pasien = (select id_pasien from pasien where nama_pasien = 'Siti Rahayu');
 ```
